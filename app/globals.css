@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: light; }
+.dark { color-scheme: dark; }
+html { scroll-behavior: smooth; }
+body { @apply bg-slate-50 text-slate-900 antialiased transition-colors duration-300 dark:bg-slate-950 dark:text-slate-100; }
+[id] { scroll-margin-top: 6rem; }
+.gradient-grid {
+  background-image: radial-gradient(circle at top left, rgba(34,211,238,.22), transparent 28rem), radial-gradient(circle at top right, rgba(37,99,235,.18), transparent 30rem), linear-gradient(rgba(15,23,42,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(15,23,42,.05) 1px, transparent 1px);
+  background-size: auto, auto, 44px 44px, 44px 44px;
+}
+.dark .gradient-grid {
+  background-image: radial-gradient(circle at top left, rgba(34,211,238,.16), transparent 28rem), radial-gradient(circle at top right, rgba(37,99,235,.22), transparent 30rem), linear-gradient(rgba(148,163,184,.08) 1px, transparent 1px), linear-gradient(90deg, rgba(148,163,184,.08) 1px, transparent 1px);
+}
+.card { @apply rounded-lg border border-slate-200 bg-white shadow-soft dark:border-slate-800 dark:bg-slate-900; }
+.badge { @apply inline-flex items-center rounded-full border border-blue-100 bg-blue-50 px-3 py-1 text-sm font-medium text-blue-700 dark:border-cyan-400/20 dark:bg-cyan-400/10 dark:text-cyan-300; }
